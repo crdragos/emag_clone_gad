@@ -1,9 +1,9 @@
+import 'dart:async';
 import 'package:emag_clone_gad/src/init/init.dart';
 import 'package:emag_clone_gad/src/models/index.dart';
 import 'package:emag_clone_gad/src/presentation/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_redux/flutter_redux.dart';
-import 'dart:async';
 import 'package:redux/redux.dart';
 
 void main() => runApp(const eMagClone());
@@ -17,7 +17,6 @@ class eMagClone extends StatefulWidget {
 }
 
 class _eMagCloneState extends State<eMagClone> {
-
   final Completer<Store<AppState>> _completer = Completer<Store<AppState>>();
 
   @override
@@ -36,7 +35,7 @@ class _eMagCloneState extends State<eMagClone> {
     return FutureBuilder<Store<AppState>>(
       builder: (BuildContext context, AsyncSnapshot<Store<AppState>> snapshot) {
         if (snapshot.hasData) {
-          final Store<AppState>store = snapshot.data;
+          final Store<AppState> store = snapshot.data;
           return StoreProvider<AppState>(
             store: store,
             child: MaterialApp(
@@ -46,7 +45,7 @@ class _eMagCloneState extends State<eMagClone> {
             ),
           );
         } else {
-          if(snapshot.hasError) {
+          if (snapshot.hasError) {
             throw snapshot.error;
           }
 

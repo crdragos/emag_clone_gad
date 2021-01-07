@@ -1,37 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="552b6865-5498-4a66-9989-844b9edc4233" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.github/workflows/main.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/KotlinJavaRuntime.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations/main_dart.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/analysis_options.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/emag_clone_gad_android.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ci/bots/analyze.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ci/bots/format.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ci/run_command.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/emag_clone_gad.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/src/actions/index.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/src/data/index.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/src/epics/app_epics.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/src/init/init.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/src/models/app_state.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/src/models/index.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/src/models/index.g.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/src/models/serializers.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/src/models/serializers.g.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/src/presentation/home.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/src/presentation/routes.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/src/reducer/reducer.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+    <list default="true" id="552b6865-5498-4a66-9989-844b9edc4233" name="Default Changelist" comment="widget_test -eliminated">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,8 +57,16 @@
       <updated>1610042329835</updated>
       <workItem from="1610042333687" duration="1177000" />
       <workItem from="1610051226758" duration="2870000" />
-      <workItem from="1610054121046" duration="1262000" />
+      <workItem from="1610054121046" duration="1676000" />
     </task>
+    <task id="LOCAL-00001" summary="widget_test -eliminated">
+      <created>1610055630231</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1610055630231</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -107,5 +86,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="widget_test -eliminated" />
+    <option name="LAST_COMMIT_MESSAGE" value="widget_test -eliminated" />
   </component>
 </project>
