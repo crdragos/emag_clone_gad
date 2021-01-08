@@ -2,7 +2,7 @@ part of auth_models;
 
 abstract class AuthState implements Built<AuthState, AuthStateBuilder> {
   factory AuthState.initialState() {
-    return _$AuthState((b) {});
+    return _$AuthState((AuthStateBuilder b) {});
   }
   factory AuthState.fromJson(dynamic json) => serializers.deserializeWith(serializer, json);
 
