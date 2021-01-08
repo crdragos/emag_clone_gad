@@ -1,12 +1,9 @@
-import 'dart:async';
-import 'package:emag_clone_gad/src/init/init.dart';
 import 'package:emag_clone_gad/src/models/index.dart';
 import 'package:emag_clone_gad/src/presentation/mixins/init_mixin.dart';
 import 'package:emag_clone_gad/src/presentation/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_redux/flutter_redux.dart';
 import 'package:redux/redux.dart';
-import 'package:rxdart/rxdart.dart';
 
 void main() => runApp(const eMagClone());
 

@@ -1,13 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="552b6865-5498-4a66-9989-844b9edc4233" name="Default Changelist" comment="add Firebase">
-      <change afterPath="$PROJECT_DIR$/lib/src/presentation/mixins/init_mixin.dart" afterDir="false" />
+    <list default="true" id="552b6865-5498-4a66-9989-844b9edc4233" name="Default Changelist" comment="add loading screen">
+      <change afterPath="$PROJECT_DIR$/lib/src/actions/auth/index.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/src/actions/auth/index.freezed.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/src/actions/auth/login.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/src/containers/auth/index.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/src/containers/auth/user_container.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/src/containers/index.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/src/data/auth_api.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/src/epics/auth_epics.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/src/models/auth/app_user.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/src/models/auth/auth_state.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/src/models/auth/index.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/src/models/auth/index.g.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/src/presentation/home/home_page.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/src/presentation/login/login_page.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/src/reducer/auth_reducer.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.flutter-plugins" beforeDir="false" afterPath="$PROJECT_DIR$/.flutter-plugins" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.flutter-plugins-dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/.flutter-plugins-dependencies" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/main.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/actions/index.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/actions/index.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/epics/app_epics.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/epics/app_epics.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/init/init.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/init/init.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/models/app_state.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/models/app_state.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/models/index.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/models/index.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/src/models/index.g.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/models/index.g.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/models/serializers.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/models/serializers.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/src/models/serializers.g.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/models/serializers.g.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/presentation/home.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/presentation/home.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/reducer/reducer.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/reducer/reducer.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,19 +82,6 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="main.dart" type="FlutterRunConfigurationType" factoryName="Flutter">
       <option name="filePath" value="$PROJECT_DIR$/lib/main.dart" />
       <method v="2" />
@@ -86,7 +99,8 @@
       <workItem from="1610051226758" duration="2870000" />
       <workItem from="1610054121046" duration="1895000" />
       <workItem from="1610059069788" duration="3031000" />
-      <workItem from="1610062125860" duration="175000" />
+      <workItem from="1610062125860" duration="5986000" />
+      <workItem from="1610095659475" duration="985000" />
     </task>
     <task id="LOCAL-00001" summary="widget_test -eliminated">
       <created>1610055630231</created>
@@ -109,7 +123,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610060628243</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="add loading screen">
+      <created>1610062425171</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1610062425171</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -132,6 +153,7 @@
     <MESSAGE value="widget_test -eliminated" />
     <MESSAGE value="code -reformated" />
     <MESSAGE value="add Firebase" />
-    <option name="LAST_COMMIT_MESSAGE" value="add Firebase" />
+    <MESSAGE value="add loading screen" />
+    <option name="LAST_COMMIT_MESSAGE" value="add loading screen" />
   </component>
 </project>
