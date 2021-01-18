@@ -6,3 +6,4 @@ import 'package:flutter_redux/flutter_redux.dart';
 import 'package:redux/redux.dart';
 
 part 'user_container.dart';
+part 'register_info_container.dart';
