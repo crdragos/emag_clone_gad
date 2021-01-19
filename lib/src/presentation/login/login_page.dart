@@ -137,38 +137,6 @@ class _LoginPageState extends State<LoginPage> with DialogMixin {
                         ),
                       ),
                     ),
-                    Container(
-                      width: 250.0,
-                      child: Align(
-                        alignment: Alignment.center,
-                        child: RaisedButton(
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(30.0),
-                          ),
-                          color: Colors.white,
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: const <Widget>[
-                              Icon(
-                                FontAwesomeIcons.apple,
-                                color: Colors.grey,
-                              ),
-                              SizedBox(width: 8.0),
-                              Text(
-                                'Login with Apple',
-                                style: TextStyle(
-                                  color: Colors.black,
-                                  fontSize: 18.0,
-                                ),
-                              ),
-                            ],
-                          ),
-                          onPressed: () {
-                            StoreProvider.of<AppState>(context).dispatch(LoginWithGoogle(_response));
-                          },
-                        ),
-                      ),
-                    ),
                     const Divider(),
                     Text.rich(
                       TextSpan(

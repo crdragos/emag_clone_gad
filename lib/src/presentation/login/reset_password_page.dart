@@ -42,14 +42,30 @@ class _ResetPasswordPageState extends State<ResetPasswordPage> with DialogMixin 
                       },
                     ),
                     const Spacer(),
-                    FlatButton(
-                      child: const Text('Reset Password'),
-                      onPressed: () {
-                        if (Form.of(context).validate()) {
-                          StoreProvider.of<AppState>(context).dispatch(ResetPassword(email: _email.text));
-                          Navigator.pop(context);
-                        }
-                      },
+                    Container(
+                      width: 250.0,
+                      child: Align(
+                        alignment: Alignment.center,
+                        child: RaisedButton(
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(30.0),
+                          ),
+                          color: Colors.greenAccent,
+                          child: const Text(
+                            'Reset Password',
+                            style: TextStyle(
+                              fontSize: 18.0,
+                              color: Colors.black,
+                            ),
+                          ),
+                          onPressed: () {
+                            if (Form.of(context).validate()) {
+                              StoreProvider.of<AppState>(context).dispatch(ResetPassword(email: _email.text));
+                              Navigator.pop(context);
+                            }
+                          },
+                        ),
+                      ),
                     ),
                   ],
                 );

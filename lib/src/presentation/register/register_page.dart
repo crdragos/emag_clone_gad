@@ -38,13 +38,29 @@ class RegisterPage extends StatelessWidget {
                         },
                       ),
                       const Spacer(),
-                      FlatButton(
-                        child: const Text('Continue'),
-                        onPressed: () {
-                          if (Form.of(context).validate()) {
-                            Navigator.pushNamed(context, AppRoutes.displayName);
-                          }
-                        },
+                      Container(
+                        width: 250.0,
+                        child: Align(
+                          alignment: Alignment.center,
+                          child: RaisedButton(
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(30.0),
+                            ),
+                            color: Colors.greenAccent,
+                            child: const Text(
+                              'Continue',
+                              style: TextStyle(
+                                fontSize: 18.0,
+                                color: Colors.black,
+                              ),
+                            ),
+                            onPressed: () {
+                              if (Form.of(context).validate()) {
+                                Navigator.pushNamed(context, AppRoutes.displayName);
+                              }
+                            },
+                          ),
+                        ),
                       ),
                       const Divider(),
                       Text.rich(
@@ -53,7 +69,10 @@ class RegisterPage extends StatelessWidget {
                           children: <TextSpan>[
                             TextSpan(
                                 text: 'Login',
-                                style: const TextStyle(fontWeight: FontWeight.bold),
+                                style: const TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 16.0,
+                                ),
                                 recognizer: TapGestureRecognizer()
                                   ..onTap = () {
                                     Navigator.popUntil(context, ModalRoute.withName(AppRoutes.home));
