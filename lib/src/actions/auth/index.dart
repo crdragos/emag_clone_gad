@@ -11,4 +11,5 @@ part 'login_with_google.dart';
 part 'reset_password.dart';
 part 'logout.dart';
 part 'set.dart';
+part 'initialize_app.dart';
 part 'index.freezed.dart';

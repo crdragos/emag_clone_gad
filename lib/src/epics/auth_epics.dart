@@ -21,6 +21,7 @@ class AuthEpics {
       TypedEpic<AppState, LoginWithGoogle$>(_loginWithGoogle),
       TypedEpic<AppState, Logout$>(_logout),
       TypedEpic<AppState, ResetPassword$>(_resetPassword),
+      TypedEpic<AppState, InitializeApp$>(_initializeApp),
     ]);
   }
 
@@ -28,7 +29,10 @@ class AuthEpics {
     return actions //
         .flatMap((Login$ action) => Stream<Login$>.value(action)
             .asyncMap((Login$ action) => _api.login(email: action.email, password: action.password))
-            .map((AppUser user) => Login.successful(user))
+            .expand((AppUser user) => [
+                  Login.successful(user),
+                  const GetProducts(),
+                ])
             .onErrorReturnWith((dynamic error) => Login.error(error))
             .doOnData(action.response));
   }
@@ -41,7 +45,10 @@ class AuthEpics {
                   password: store.state.auth.info.password,
                   displayName: store.state.auth.info.displayName ?? store.state.auth.info.email.split('@').first,
                 ))
-            .map((AppUser user) => Register.successful(user))
+            .expand((AppUser user) => [
+                  Register.successful(user),
+                  const GetProducts(),
+                ])
             .onErrorReturnWith((dynamic error) => Register.error(error))
             .doOnData(action.response));
   }
@@ -50,7 +57,10 @@ class AuthEpics {
     return actions //
         .flatMap((LoginWithGoogle$ action) => Stream<LoginWithGoogle$>.value(action)
             .asyncMap((LoginWithGoogle$ action) => _api.loginWithGoogle())
-            .map((AppUser user) => LoginWithGoogle.successful(user))
+            .expand((AppUser user) => [
+                  LoginWithGoogle.successful(user),
+                  const GetProducts(),
+                ])
             .onErrorReturnWith((dynamic error) => LoginWithGoogle.error(error))
             .doOnData(action.response));
   }
@@ -69,5 +79,16 @@ class AuthEpics {
             .asyncMap((ResetPassword$ action) => _api.resetPassword(email: action.email))
             .map((_) => const ResetPassword.successful())
             .onErrorReturnWith((dynamic error) => ResetPassword.error(error)));
+  }
+
+  Stream<AppAction> _initializeApp(Stream<InitializeApp$> actions, EpicStore<AppState> store) {
+    return actions //
+        .flatMap((InitializeApp$ action) => Stream<InitializeApp$>.value(action)
+            .asyncMap((InitializeApp$ action) => _api.initializeApp())
+            .expand((AppUser user) => [
+                  InitializeApp.successful(user),
+                  const GetProducts(),
+                ])
+            .onErrorReturnWith((dynamic error) => InitializeApp.error(error)));
   }
 }
