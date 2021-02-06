@@ -19,11 +19,9 @@ class _$AppStateSerializer implements StructuredSerializer<AppState> {
       {FullType specifiedType = FullType.unspecified}) {
     final result = <Object>[
       'auth',
-      serializers.serialize(object.auth,
-          specifiedType: const FullType(AuthState)),
+      serializers.serialize(object.auth, specifiedType: const FullType(AuthState)),
       'products',
-      serializers.serialize(object.products,
-          specifiedType: const FullType(ProductsState)),
+      serializers.serialize(object.products, specifiedType: const FullType(ProductsState)),
     ];
 
     return result;
@@ -41,12 +39,11 @@ class _$AppStateSerializer implements StructuredSerializer<AppState> {
       final dynamic value = iterator.current;
       switch (key) {
         case 'auth':
-          result.auth.replace(serializers.deserialize(value,
-              specifiedType: const FullType(AuthState)) as AuthState);
+          result.auth.replace(serializers.deserialize(value, specifiedType: const FullType(AuthState)) as AuthState);
           break;
         case 'products':
-          result.products.replace(serializers.deserialize(value,
-              specifiedType: const FullType(ProductsState)) as ProductsState);
+          result.products
+              .replace(serializers.deserialize(value, specifiedType: const FullType(ProductsState)) as ProductsState);
           break;
       }
     }
@@ -61,8 +58,7 @@ class _$AppState extends AppState {
   @override
   final ProductsState products;
 
-  factory _$AppState([void Function(AppStateBuilder) updates]) =>
-      (new AppStateBuilder()..update(updates)).build();
+  factory _$AppState([void Function(AppStateBuilder) updates]) => (new AppStateBuilder()..update(updates)).build();
 
   _$AppState._({this.auth, this.products}) : super._() {
     if (auth == null) {
@@ -74,8 +70,7 @@ class _$AppState extends AppState {
   }
 
   @override
-  AppState rebuild(void Function(AppStateBuilder) updates) =>
-      (toBuilder()..update(updates)).build();
+  AppState rebuild(void Function(AppStateBuilder) updates) => (toBuilder()..update(updates)).build();
 
   @override
   AppStateBuilder toBuilder() => new AppStateBuilder()..replace(this);
@@ -83,9 +78,7 @@ class _$AppState extends AppState {
   @override
   bool operator ==(Object other) {
     if (identical(other, this)) return true;
-    return other is AppState &&
-        auth == other.auth &&
-        products == other.products;
+    return other is AppState && auth == other.auth && products == other.products;
   }
 
   @override
@@ -95,10 +88,7 @@ class _$AppState extends AppState {
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper('AppState')
-          ..add('auth', auth)
-          ..add('products', products))
-        .toString();
+    return (newBuiltValueToStringHelper('AppState')..add('auth', auth)..add('products', products)).toString();
   }
 }
 
@@ -110,8 +100,7 @@ class AppStateBuilder implements Builder<AppState, AppStateBuilder> {
   set auth(AuthStateBuilder auth) => _$this._auth = auth;
 
   ProductsStateBuilder _products;
-  ProductsStateBuilder get products =>
-      _$this._products ??= new ProductsStateBuilder();
+  ProductsStateBuilder get products => _$this._products ??= new ProductsStateBuilder();
   set products(ProductsStateBuilder products) => _$this._products = products;
 
   AppStateBuilder();
@@ -142,8 +131,7 @@ class AppStateBuilder implements Builder<AppState, AppStateBuilder> {
   _$AppState build() {
     _$AppState _$result;
     try {
-      _$result = _$v ??
-          new _$AppState._(auth: auth.build(), products: products.build());
+      _$result = _$v ?? new _$AppState._(auth: auth.build(), products: products.build());
     } catch (_) {
       String _$failedField;
       try {
@@ -152,8 +140,7 @@ class AppStateBuilder implements Builder<AppState, AppStateBuilder> {
         _$failedField = 'products';
         products.build();
       } catch (e) {
-        throw new BuiltValueNestedFieldError(
-            'AppState', _$failedField, e.toString());
+        throw new BuiltValueNestedFieldError('AppState', _$failedField, e.toString());
       }
       rethrow;
     }
