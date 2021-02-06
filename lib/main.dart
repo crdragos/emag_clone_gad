@@ -31,7 +31,15 @@ class _eMagCloneState extends State<eMagClone> with InitMixin<eMagClone> {
                 appBarTheme: const AppBarTheme(
                   elevation: 0.0,
                   color: Colors.white,
-                  brightness: Brightness.light,
+                  brightness: Brightness.dark,
+                  textTheme: TextTheme(
+                    headline6: TextStyle(
+                      color: Colors.blue,
+                      fontSize: 18.0,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  iconTheme: IconThemeData(color: Colors.blue),
                 ),
               ),
               routes: AppRoutes.routes,

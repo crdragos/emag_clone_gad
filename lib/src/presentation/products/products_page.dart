@@ -1,8 +1,10 @@
+import 'package:emag_clone_gad/src/actions/index.dart';
 import 'package:emag_clone_gad/src/containers/index.dart';
 import 'package:emag_clone_gad/src/models/index.dart';
 import 'package:emag_clone_gad/src/presentation/products/product_item.dart';
 import 'package:emag_clone_gad/src/presentation/routes.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_redux/flutter_redux.dart';
 
 class ProductsPage extends StatelessWidget {
   const ProductsPage({Key key}) : super(key: key);
@@ -57,11 +59,17 @@ class ProductsPage extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
-                    Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 16.0),
-                      child: Text(
-                        category,
-                        style: Theme.of(context).textTheme.headline6,
+                    InkWell(
+                      onTap: () {
+                        StoreProvider.of<AppState>(context).dispatch(SetSelectedCategory(category));
+                        Navigator.pushNamed(context, AppRoutes.productsList);
+                      },
+                      child: Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                        child: Text(
+                          category,
+                          style: Theme.of(context).textTheme.headline6,
+                        ),
                       ),
                     ),
                     Expanded(

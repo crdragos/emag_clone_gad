@@ -1,6 +1,7 @@
 import 'package:emag_clone_gad/src/presentation/home.dart';
 import 'package:emag_clone_gad/src/presentation/login/login_page.dart';
 import 'package:emag_clone_gad/src/presentation/login/reset_password_page.dart';
+import 'package:emag_clone_gad/src/presentation/products/products_list.dart';
 import 'package:emag_clone_gad/src/presentation/products/searched_products_page.dart';
 import 'package:emag_clone_gad/src/presentation/register/name_page.dart';
 import 'package:emag_clone_gad/src/presentation/register/password_page.dart';
@@ -16,6 +17,7 @@ class AppRoutes {
   static const String password = '/password';
   static const String resetPassword = '/resetPassword';
   static const String searchProducts = '/searchProducts';
+  static const String productsList = '/productsList';
 
   static final Map<String, WidgetBuilder> routes = <String, WidgetBuilder>{
     home: (BuildContext context) => const Home(),
@@ -25,5 +27,6 @@ class AppRoutes {
     password: (BuildContext context) => const PasswordPage(),
     resetPassword: (BuildContext context) => const ResetPasswordPage(),
     searchProducts: (BuildContext context) => const SearchedProductsPage(),
+    productsList: (BuildContext context) => const ProductsList(),
   };
 }

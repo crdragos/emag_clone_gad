@@ -20,7 +20,7 @@ eMag app clone
 * [x] search products (15')
 * [x] highlight products per category (25')
 * [x] add products to cart (10')
-* [ ] show all products from a category (25')
+* [x] show all products from a category (25')
 * [ ] filter and sorting (35')
 * [ ] presentation layout (list, grid, hero) (10')
 
