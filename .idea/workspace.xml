@@ -5,13 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="552b6865-5498-4a66-9989-844b9edc4233" name="Default Changelist" comment="ui design for buttons -added">
+      <change beforePath="$PROJECT_DIR$/.flutter-plugins-dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/.flutter-plugins-dependencies" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/actions/auth/update_cart.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/actions/auth/update_cart.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/actions/auth/index.freezed.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/actions/auth/index.freezed.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/actions/products/index.freezed.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/actions/products/index.freezed.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/containers/products/products_container.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/containers/products/products_container.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/src/models/auth/index.g.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/models/auth/index.g.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/models/index.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/models/index.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/models/index.g.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/models/index.g.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/models/index.g.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/src/models/products/index.g.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/models/products/index.g.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/src/models/serializers.g.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/models/serializers.g.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/presentation/products/products_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/presentation/products/products_page.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,17 +84,6 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="main.dart" type="FlutterRunConfigurationType" factoryName="Flutter">
       <option name="filePath" value="$PROJECT_DIR$/lib/main.dart" />
       <method v="2" />
@@ -143,7 +136,8 @@
       <workItem from="1612355761930" duration="5537000" />
       <workItem from="1612366624467" duration="112000" />
       <workItem from="1612366798042" duration="10000" />
-      <workItem from="1612622695037" duration="5962000" />
+      <workItem from="1612622695037" duration="6910000" />
+      <workItem from="1612630467857" duration="1853000" />
     </task>
     <task id="LOCAL-00001" summary="widget_test -eliminated">
       <created>1610055630231</created>
@@ -208,7 +202,21 @@
       <option name="project" value="LOCAL" />
       <updated>1612628997328</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="* code formatting">
+      <created>1612629586061</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1612629586061</updated>
+    </task>
+    <task id="LOCAL-00011" summary="* delete unused imports">
+      <created>1612629824086</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1612629824086</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -238,6 +246,8 @@
     <MESSAGE value="ui design for buttons -added" />
     <MESSAGE value="* keep the user logged in&#10;* retrieve list with all products&#10;* search for a product using searchIndex" />
     <MESSAGE value="* add product to cart" />
-    <option name="LAST_COMMIT_MESSAGE" value="* add product to cart" />
+    <MESSAGE value="* code formatting" />
+    <MESSAGE value="* delete unused imports" />
+    <option name="LAST_COMMIT_MESSAGE" value="* delete unused imports" />
   </component>
 </project>

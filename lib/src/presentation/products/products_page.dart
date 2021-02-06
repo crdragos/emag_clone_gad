@@ -38,7 +38,6 @@ class ProductsPage extends StatelessWidget {
                       if (user == null) {
                         return Container();
                       }
-
                       return Text('${user.cart?.totalProducts}');
                     },
                   ),
@@ -48,14 +47,43 @@ class ProductsPage extends StatelessWidget {
           ),
         ),
       ),
-      body: ProductsContainer(builder: (BuildContext context, List<Product> products) {
-        return ListView.builder(
-          padding: const EdgeInsets.all(8.0),
-          itemCount: products.length,
-          itemBuilder: (BuildContext context, int index) {
-            final Product product = products[index];
-            return ProductItem(product: product);
-          },
+      body: ProductsContainer(builder: (BuildContext context, Map<String, List<Product>> map) {
+        return SingleChildScrollView(
+          child: Column(
+            children: map.keys.map((String category) {
+              final List<Product> products = map[category];
+              return Container(
+                height: MediaQuery.of(context).size.height * .5,
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: <Widget>[
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                      child: Text(
+                        category,
+                        style: Theme.of(context).textTheme.headline6,
+                      ),
+                    ),
+                    Expanded(
+                      child: ListView.builder(
+                        scrollDirection: Axis.horizontal,
+                        padding: const EdgeInsets.all(16.0),
+                        itemCount: products.length,
+                        itemBuilder: (BuildContext context, int index) {
+                          final Product product = products[index];
+                          return Container(
+                            width: MediaQuery.of(context).size.width,
+                            child: ProductItem(product: product),
+                          );
+                        },
+                      ),
+                    ),
+                    const Divider(),
+                  ],
+                ),
+              );
+            }).toList(),
+          ),
         );
       }),
     );
