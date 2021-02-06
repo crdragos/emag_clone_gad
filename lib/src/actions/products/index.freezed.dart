@@ -69,7 +69,9 @@ mixin _$GetProducts {
 
 /// @nodoc
 abstract class $GetProductsCopyWith<$Res> {
-  factory $GetProductsCopyWith(GetProducts value, $Res Function(GetProducts) then) = _$GetProductsCopyWithImpl<$Res>;
+  factory $GetProductsCopyWith(
+          GetProducts value, $Res Function(GetProducts) then) =
+      _$GetProductsCopyWithImpl<$Res>;
 }
 
 /// @nodoc
@@ -83,13 +85,16 @@ class _$GetProductsCopyWithImpl<$Res> implements $GetProductsCopyWith<$Res> {
 
 /// @nodoc
 abstract class $GetProducts$CopyWith<$Res> {
-  factory $GetProducts$CopyWith(GetProducts$ value, $Res Function(GetProducts$) then) =
+  factory $GetProducts$CopyWith(
+          GetProducts$ value, $Res Function(GetProducts$) then) =
       _$GetProducts$CopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$GetProducts$CopyWithImpl<$Res> extends _$GetProductsCopyWithImpl<$Res> implements $GetProducts$CopyWith<$Res> {
-  _$GetProducts$CopyWithImpl(GetProducts$ _value, $Res Function(GetProducts$) _then)
+class _$GetProducts$CopyWithImpl<$Res> extends _$GetProductsCopyWithImpl<$Res>
+    implements $GetProducts$CopyWith<$Res> {
+  _$GetProducts$CopyWithImpl(
+      GetProducts$ _value, $Res Function(GetProducts$) _then)
       : super(_value, (v) => _then(v as GetProducts$));
 
   @override
@@ -176,15 +181,18 @@ abstract class GetProducts$ implements GetProducts {
 
 /// @nodoc
 abstract class $GetProductsSuccessfulCopyWith<$Res> {
-  factory $GetProductsSuccessfulCopyWith(GetProductsSuccessful value, $Res Function(GetProductsSuccessful) then) =
+  factory $GetProductsSuccessfulCopyWith(GetProductsSuccessful value,
+          $Res Function(GetProductsSuccessful) then) =
       _$GetProductsSuccessfulCopyWithImpl<$Res>;
   $Res call({List<Product> products});
 }
 
 /// @nodoc
-class _$GetProductsSuccessfulCopyWithImpl<$Res> extends _$GetProductsCopyWithImpl<$Res>
+class _$GetProductsSuccessfulCopyWithImpl<$Res>
+    extends _$GetProductsCopyWithImpl<$Res>
     implements $GetProductsSuccessfulCopyWith<$Res> {
-  _$GetProductsSuccessfulCopyWithImpl(GetProductsSuccessful _value, $Res Function(GetProductsSuccessful) _then)
+  _$GetProductsSuccessfulCopyWithImpl(
+      GetProductsSuccessful _value, $Res Function(GetProductsSuccessful) _then)
       : super(_value, (v) => _then(v as GetProductsSuccessful));
 
   @override
@@ -216,15 +224,19 @@ class _$GetProductsSuccessful implements GetProductsSuccessful {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other is GetProductsSuccessful &&
-            (identical(other.products, products) || const DeepCollectionEquality().equals(other.products, products)));
+            (identical(other.products, products) ||
+                const DeepCollectionEquality()
+                    .equals(other.products, products)));
   }
 
   @override
-  int get hashCode => runtimeType.hashCode ^ const DeepCollectionEquality().hash(products);
+  int get hashCode =>
+      runtimeType.hashCode ^ const DeepCollectionEquality().hash(products);
 
   @override
   $GetProductsSuccessfulCopyWith<GetProductsSuccessful> get copyWith =>
-      _$GetProductsSuccessfulCopyWithImpl<GetProductsSuccessful>(this, _$identity);
+      _$GetProductsSuccessfulCopyWithImpl<GetProductsSuccessful>(
+          this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -284,7 +296,8 @@ class _$GetProductsSuccessful implements GetProductsSuccessful {
 }
 
 abstract class GetProductsSuccessful implements GetProducts {
-  const factory GetProductsSuccessful(List<Product> products) = _$GetProductsSuccessful;
+  const factory GetProductsSuccessful(List<Product> products) =
+      _$GetProductsSuccessful;
 
   List<Product> get products;
   $GetProductsSuccessfulCopyWith<GetProductsSuccessful> get copyWith;
@@ -292,15 +305,18 @@ abstract class GetProductsSuccessful implements GetProducts {
 
 /// @nodoc
 abstract class $GetProductsErrorCopyWith<$Res> {
-  factory $GetProductsErrorCopyWith(GetProductsError value, $Res Function(GetProductsError) then) =
+  factory $GetProductsErrorCopyWith(
+          GetProductsError value, $Res Function(GetProductsError) then) =
       _$GetProductsErrorCopyWithImpl<$Res>;
   $Res call({Object error});
 }
 
 /// @nodoc
-class _$GetProductsErrorCopyWithImpl<$Res> extends _$GetProductsCopyWithImpl<$Res>
+class _$GetProductsErrorCopyWithImpl<$Res>
+    extends _$GetProductsCopyWithImpl<$Res>
     implements $GetProductsErrorCopyWith<$Res> {
-  _$GetProductsErrorCopyWithImpl(GetProductsError _value, $Res Function(GetProductsError) _then)
+  _$GetProductsErrorCopyWithImpl(
+      GetProductsError _value, $Res Function(GetProductsError) _then)
       : super(_value, (v) => _then(v as GetProductsError));
 
   @override
@@ -334,11 +350,13 @@ class _$GetProductsError implements GetProductsError {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other is GetProductsError &&
-            (identical(other.error, error) || const DeepCollectionEquality().equals(other.error, error)));
+            (identical(other.error, error) ||
+                const DeepCollectionEquality().equals(other.error, error)));
   }
 
   @override
-  int get hashCode => runtimeType.hashCode ^ const DeepCollectionEquality().hash(error);
+  int get hashCode =>
+      runtimeType.hashCode ^ const DeepCollectionEquality().hash(error);
 
   @override
   $GetProductsErrorCopyWith<GetProductsError> get copyWith =>
@@ -470,12 +488,14 @@ mixin _$SearchProducts {
 
 /// @nodoc
 abstract class $SearchProductsCopyWith<$Res> {
-  factory $SearchProductsCopyWith(SearchProducts value, $Res Function(SearchProducts) then) =
+  factory $SearchProductsCopyWith(
+          SearchProducts value, $Res Function(SearchProducts) then) =
       _$SearchProductsCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$SearchProductsCopyWithImpl<$Res> implements $SearchProductsCopyWith<$Res> {
+class _$SearchProductsCopyWithImpl<$Res>
+    implements $SearchProductsCopyWith<$Res> {
   _$SearchProductsCopyWithImpl(this._value, this._then);
 
   final SearchProducts _value;
@@ -485,15 +505,18 @@ class _$SearchProductsCopyWithImpl<$Res> implements $SearchProductsCopyWith<$Res
 
 /// @nodoc
 abstract class $SearchProducts$CopyWith<$Res> {
-  factory $SearchProducts$CopyWith(SearchProducts$ value, $Res Function(SearchProducts$) then) =
+  factory $SearchProducts$CopyWith(
+          SearchProducts$ value, $Res Function(SearchProducts$) then) =
       _$SearchProducts$CopyWithImpl<$Res>;
   $Res call({String query});
 }
 
 /// @nodoc
-class _$SearchProducts$CopyWithImpl<$Res> extends _$SearchProductsCopyWithImpl<$Res>
+class _$SearchProducts$CopyWithImpl<$Res>
+    extends _$SearchProductsCopyWithImpl<$Res>
     implements $SearchProducts$CopyWith<$Res> {
-  _$SearchProducts$CopyWithImpl(SearchProducts$ _value, $Res Function(SearchProducts$) _then)
+  _$SearchProducts$CopyWithImpl(
+      SearchProducts$ _value, $Res Function(SearchProducts$) _then)
       : super(_value, (v) => _then(v as SearchProducts$));
 
   @override
@@ -525,11 +548,13 @@ class _$SearchProducts$ implements SearchProducts$ {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other is SearchProducts$ &&
-            (identical(other.query, query) || const DeepCollectionEquality().equals(other.query, query)));
+            (identical(other.query, query) ||
+                const DeepCollectionEquality().equals(other.query, query)));
   }
 
   @override
-  int get hashCode => runtimeType.hashCode ^ const DeepCollectionEquality().hash(query);
+  int get hashCode =>
+      runtimeType.hashCode ^ const DeepCollectionEquality().hash(query);
 
   @override
   $SearchProducts$CopyWith<SearchProducts$> get copyWith =>
@@ -601,20 +626,23 @@ abstract class SearchProducts$ implements SearchProducts {
 
 /// @nodoc
 abstract class $SearchProductsSuccessfulCopyWith<$Res> {
-  factory $SearchProductsSuccessfulCopyWith(
-          SearchProductsSuccessful value, $Res Function(SearchProductsSuccessful) then) =
+  factory $SearchProductsSuccessfulCopyWith(SearchProductsSuccessful value,
+          $Res Function(SearchProductsSuccessful) then) =
       _$SearchProductsSuccessfulCopyWithImpl<$Res>;
   $Res call({List<Product> products});
 }
 
 /// @nodoc
-class _$SearchProductsSuccessfulCopyWithImpl<$Res> extends _$SearchProductsCopyWithImpl<$Res>
+class _$SearchProductsSuccessfulCopyWithImpl<$Res>
+    extends _$SearchProductsCopyWithImpl<$Res>
     implements $SearchProductsSuccessfulCopyWith<$Res> {
-  _$SearchProductsSuccessfulCopyWithImpl(SearchProductsSuccessful _value, $Res Function(SearchProductsSuccessful) _then)
+  _$SearchProductsSuccessfulCopyWithImpl(SearchProductsSuccessful _value,
+      $Res Function(SearchProductsSuccessful) _then)
       : super(_value, (v) => _then(v as SearchProductsSuccessful));
 
   @override
-  SearchProductsSuccessful get _value => super._value as SearchProductsSuccessful;
+  SearchProductsSuccessful get _value =>
+      super._value as SearchProductsSuccessful;
 
   @override
   $Res call({
@@ -642,15 +670,19 @@ class _$SearchProductsSuccessful implements SearchProductsSuccessful {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other is SearchProductsSuccessful &&
-            (identical(other.products, products) || const DeepCollectionEquality().equals(other.products, products)));
+            (identical(other.products, products) ||
+                const DeepCollectionEquality()
+                    .equals(other.products, products)));
   }
 
   @override
-  int get hashCode => runtimeType.hashCode ^ const DeepCollectionEquality().hash(products);
+  int get hashCode =>
+      runtimeType.hashCode ^ const DeepCollectionEquality().hash(products);
 
   @override
   $SearchProductsSuccessfulCopyWith<SearchProductsSuccessful> get copyWith =>
-      _$SearchProductsSuccessfulCopyWithImpl<SearchProductsSuccessful>(this, _$identity);
+      _$SearchProductsSuccessfulCopyWithImpl<SearchProductsSuccessful>(
+          this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -710,7 +742,8 @@ class _$SearchProductsSuccessful implements SearchProductsSuccessful {
 }
 
 abstract class SearchProductsSuccessful implements SearchProducts {
-  const factory SearchProductsSuccessful(List<Product> products) = _$SearchProductsSuccessful;
+  const factory SearchProductsSuccessful(List<Product> products) =
+      _$SearchProductsSuccessful;
 
   List<Product> get products;
   $SearchProductsSuccessfulCopyWith<SearchProductsSuccessful> get copyWith;
@@ -718,15 +751,18 @@ abstract class SearchProductsSuccessful implements SearchProducts {
 
 /// @nodoc
 abstract class $SearchProductsErrorCopyWith<$Res> {
-  factory $SearchProductsErrorCopyWith(SearchProductsError value, $Res Function(SearchProductsError) then) =
+  factory $SearchProductsErrorCopyWith(
+          SearchProductsError value, $Res Function(SearchProductsError) then) =
       _$SearchProductsErrorCopyWithImpl<$Res>;
   $Res call({Object error});
 }
 
 /// @nodoc
-class _$SearchProductsErrorCopyWithImpl<$Res> extends _$SearchProductsCopyWithImpl<$Res>
+class _$SearchProductsErrorCopyWithImpl<$Res>
+    extends _$SearchProductsCopyWithImpl<$Res>
     implements $SearchProductsErrorCopyWith<$Res> {
-  _$SearchProductsErrorCopyWithImpl(SearchProductsError _value, $Res Function(SearchProductsError) _then)
+  _$SearchProductsErrorCopyWithImpl(
+      SearchProductsError _value, $Res Function(SearchProductsError) _then)
       : super(_value, (v) => _then(v as SearchProductsError));
 
   @override
@@ -760,11 +796,13 @@ class _$SearchProductsError implements SearchProductsError {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other is SearchProductsError &&
-            (identical(other.error, error) || const DeepCollectionEquality().equals(other.error, error)));
+            (identical(other.error, error) ||
+                const DeepCollectionEquality().equals(other.error, error)));
   }
 
   @override
-  int get hashCode => runtimeType.hashCode ^ const DeepCollectionEquality().hash(error);
+  int get hashCode =>
+      runtimeType.hashCode ^ const DeepCollectionEquality().hash(error);
 
   @override
   $SearchProductsErrorCopyWith<SearchProductsError> get copyWith =>

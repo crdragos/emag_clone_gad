@@ -22,6 +22,7 @@ class AuthEpics {
       TypedEpic<AppState, Logout$>(_logout),
       TypedEpic<AppState, ResetPassword$>(_resetPassword),
       TypedEpic<AppState, InitializeApp$>(_initializeApp),
+      TypedEpic<AppState, UpdateCart$>(_updateCart),
     ]);
   }
 
@@ -29,7 +30,7 @@ class AuthEpics {
     return actions //
         .flatMap((Login$ action) => Stream<Login$>.value(action)
             .asyncMap((Login$ action) => _api.login(email: action.email, password: action.password))
-            .expand((AppUser user) => [
+            .expand((AppUser user) => <AppAction>[
                   Login.successful(user),
                   const GetProducts(),
                 ])
@@ -45,7 +46,7 @@ class AuthEpics {
                   password: store.state.auth.info.password,
                   displayName: store.state.auth.info.displayName ?? store.state.auth.info.email.split('@').first,
                 ))
-            .expand((AppUser user) => [
+            .expand((AppUser user) => <AppAction>[
                   Register.successful(user),
                   const GetProducts(),
                 ])
@@ -57,7 +58,7 @@ class AuthEpics {
     return actions //
         .flatMap((LoginWithGoogle$ action) => Stream<LoginWithGoogle$>.value(action)
             .asyncMap((LoginWithGoogle$ action) => _api.loginWithGoogle())
-            .expand((AppUser user) => [
+            .expand((AppUser user) => <AppAction>[
                   LoginWithGoogle.successful(user),
                   const GetProducts(),
                 ])
@@ -85,10 +86,18 @@ class AuthEpics {
     return actions //
         .flatMap((InitializeApp$ action) => Stream<InitializeApp$>.value(action)
             .asyncMap((InitializeApp$ action) => _api.initializeApp())
-            .expand((AppUser user) => [
+            .expand((AppUser user) => <AppAction>[
                   InitializeApp.successful(user),
                   const GetProducts(),
                 ])
             .onErrorReturnWith((dynamic error) => InitializeApp.error(error)));
+  }
+
+  Stream<AppAction> _updateCart(Stream<UpdateCart$> actions, EpicStore<AppState> store) {
+    return actions //
+        .flatMap((UpdateCart$ action) => Stream<UpdateCart$>.value(action)
+            .asyncMap((UpdateCart$ action) => _api.updateCart(store.state.auth.user.uid, action.cart))
+            .map((_) => UpdateCart.successful(action.cart))
+            .onErrorReturnWith((dynamic error) => UpdateCart.error(error)));
   }
 }

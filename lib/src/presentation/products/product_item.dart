@@ -1,6 +1,9 @@
 import 'package:cached_network_image/cached_network_image.dart';
+import 'package:emag_clone_gad/src/containers/auth/index.dart';
 import 'package:emag_clone_gad/src/models/index.dart';
+import 'package:emag_clone_gad/src/actions/index.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_redux/flutter_redux.dart';
 
 class ProductItem extends StatelessWidget {
   const ProductItem({Key key, @required this.product}) : super(key: key);
@@ -103,9 +106,26 @@ class ProductItem extends StatelessWidget {
                     style: const TextStyle(color: Colors.black),
                   ),
                   const Spacer(),
-                  IconButton(
-                    icon: const Icon(Icons.add_shopping_cart),
-                    onPressed: () {},
+                  UserContainer(
+                    builder: (BuildContext context, AppUser user) {
+                      return IconButton(
+                        icon: const Icon(Icons.add_shopping_cart),
+                        onPressed: () {
+                          Cart cart = user.cart ?? Cart();
+                          cart = cart.rebuild((CartBuilder b) {
+                            final int index = cart.items.indexWhere((CartItem item) => product.id == item.productId);
+
+                            if (index == -1) {
+                              b.items.add(CartItem(product.id, 1));
+                            } else {
+                              b.items[index] =
+                                  cart.items[index].rebuild((CartItemBuilder b) => b.quantity = b.quantity + 1);
+                            }
+                          });
+                          StoreProvider.of<AppState>(context).dispatch(UpdateCart(cart));
+                        },
+                      );
+                    },
                   ),
                 ],
               ),

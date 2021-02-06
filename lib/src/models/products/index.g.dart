@@ -23,15 +23,18 @@ ProductState _$valueOf(String name) {
   }
 }
 
-final BuiltSet<ProductState> _$values = new BuiltSet<ProductState>(const <ProductState>[
+final BuiltSet<ProductState> _$values =
+    new BuiltSet<ProductState>(const <ProductState>[
   _$inStock,
   _$lastItem,
   _$outOfStock,
 ]);
 
-Serializer<ProductsState> _$productsStateSerializer = new _$ProductsStateSerializer();
+Serializer<ProductsState> _$productsStateSerializer =
+    new _$ProductsStateSerializer();
 Serializer<Product> _$productSerializer = new _$ProductSerializer();
-Serializer<ProductState> _$productStateSerializer = new _$ProductStateSerializer();
+Serializer<ProductState> _$productStateSerializer =
+    new _$ProductStateSerializer();
 
 class _$ProductsStateSerializer implements StructuredSerializer<ProductsState> {
   @override
@@ -44,17 +47,21 @@ class _$ProductsStateSerializer implements StructuredSerializer<ProductsState> {
       {FullType specifiedType = FullType.unspecified}) {
     final result = <Object>[
       'products',
-      serializers.serialize(object.products, specifiedType: const FullType(BuiltList, const [const FullType(Product)])),
+      serializers.serialize(object.products,
+          specifiedType:
+              const FullType(BuiltList, const [const FullType(Product)])),
       'searchedProducts',
       serializers.serialize(object.searchedProducts,
-          specifiedType: const FullType(BuiltList, const [const FullType(Product)])),
+          specifiedType:
+              const FullType(BuiltList, const [const FullType(Product)])),
     ];
 
     return result;
   }
 
   @override
-  ProductsState deserialize(Serializers serializers, Iterable<Object> serialized,
+  ProductsState deserialize(
+      Serializers serializers, Iterable<Object> serialized,
       {FullType specifiedType = FullType.unspecified}) {
     final result = new ProductsStateBuilder();
 
@@ -66,11 +73,15 @@ class _$ProductsStateSerializer implements StructuredSerializer<ProductsState> {
       switch (key) {
         case 'products':
           result.products.replace(serializers.deserialize(value,
-              specifiedType: const FullType(BuiltList, const [const FullType(Product)])) as BuiltList<Object>);
+                  specifiedType: const FullType(
+                      BuiltList, const [const FullType(Product)]))
+              as BuiltList<Object>);
           break;
         case 'searchedProducts':
           result.searchedProducts.replace(serializers.deserialize(value,
-              specifiedType: const FullType(BuiltList, const [const FullType(Product)])) as BuiltList<Object>);
+                  specifiedType: const FullType(
+                      BuiltList, const [const FullType(Product)]))
+              as BuiltList<Object>);
           break;
       }
     }
@@ -86,27 +97,37 @@ class _$ProductSerializer implements StructuredSerializer<Product> {
   final String wireName = 'Product';
 
   @override
-  Iterable<Object> serialize(Serializers serializers, Product object, {FullType specifiedType = FullType.unspecified}) {
+  Iterable<Object> serialize(Serializers serializers, Product object,
+      {FullType specifiedType = FullType.unspecified}) {
     final result = <Object>[
       'id',
       serializers.serialize(object.id, specifiedType: const FullType(String)),
       'title',
-      serializers.serialize(object.title, specifiedType: const FullType(String)),
+      serializers.serialize(object.title,
+          specifiedType: const FullType(String)),
       'price',
-      serializers.serialize(object.price, specifiedType: const FullType(double)),
+      serializers.serialize(object.price,
+          specifiedType: const FullType(double)),
       'description',
-      serializers.serialize(object.description, specifiedType: const FullType(String)),
+      serializers.serialize(object.description,
+          specifiedType: const FullType(String)),
       'category',
-      serializers.serialize(object.category, specifiedType: const FullType(String)),
+      serializers.serialize(object.category,
+          specifiedType: const FullType(String)),
       'images',
-      serializers.serialize(object.images, specifiedType: const FullType(BuiltList, const [const FullType(String)])),
+      serializers.serialize(object.images,
+          specifiedType:
+              const FullType(BuiltList, const [const FullType(String)])),
       'review',
-      serializers.serialize(object.review, specifiedType: const FullType(double)),
+      serializers.serialize(object.review,
+          specifiedType: const FullType(double)),
       'productState',
-      serializers.serialize(object.productState, specifiedType: const FullType(ProductState)),
+      serializers.serialize(object.productState,
+          specifiedType: const FullType(ProductState)),
       'searchIndex',
       serializers.serialize(object.searchIndex,
-          specifiedType: const FullType(BuiltList, const [const FullType(String)])),
+          specifiedType:
+              const FullType(BuiltList, const [const FullType(String)])),
     ];
 
     return result;
@@ -124,34 +145,44 @@ class _$ProductSerializer implements StructuredSerializer<Product> {
       final dynamic value = iterator.current;
       switch (key) {
         case 'id':
-          result.id = serializers.deserialize(value, specifiedType: const FullType(String)) as String;
+          result.id = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
           break;
         case 'title':
-          result.title = serializers.deserialize(value, specifiedType: const FullType(String)) as String;
+          result.title = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
           break;
         case 'price':
-          result.price = serializers.deserialize(value, specifiedType: const FullType(double)) as double;
+          result.price = serializers.deserialize(value,
+              specifiedType: const FullType(double)) as double;
           break;
         case 'description':
-          result.description = serializers.deserialize(value, specifiedType: const FullType(String)) as String;
+          result.description = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
           break;
         case 'category':
-          result.category = serializers.deserialize(value, specifiedType: const FullType(String)) as String;
+          result.category = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
           break;
         case 'images':
           result.images.replace(serializers.deserialize(value,
-              specifiedType: const FullType(BuiltList, const [const FullType(String)])) as BuiltList<Object>);
+                  specifiedType:
+                      const FullType(BuiltList, const [const FullType(String)]))
+              as BuiltList<Object>);
           break;
         case 'review':
-          result.review = serializers.deserialize(value, specifiedType: const FullType(double)) as double;
+          result.review = serializers.deserialize(value,
+              specifiedType: const FullType(double)) as double;
           break;
         case 'productState':
-          result.productState =
-              serializers.deserialize(value, specifiedType: const FullType(ProductState)) as ProductState;
+          result.productState = serializers.deserialize(value,
+              specifiedType: const FullType(ProductState)) as ProductState;
           break;
         case 'searchIndex':
           result.searchIndex.replace(serializers.deserialize(value,
-              specifiedType: const FullType(BuiltList, const [const FullType(String)])) as BuiltList<Object>);
+                  specifiedType:
+                      const FullType(BuiltList, const [const FullType(String)]))
+              as BuiltList<Object>);
           break;
       }
     }
@@ -167,7 +198,8 @@ class _$ProductStateSerializer implements PrimitiveSerializer<ProductState> {
   final String wireName = 'ProductState';
 
   @override
-  Object serialize(Serializers serializers, ProductState object, {FullType specifiedType = FullType.unspecified}) =>
+  Object serialize(Serializers serializers, ProductState object,
+          {FullType specifiedType = FullType.unspecified}) =>
       object.name;
 
   @override
@@ -195,7 +227,8 @@ class _$ProductsState extends ProductsState {
   }
 
   @override
-  ProductsState rebuild(void Function(ProductsStateBuilder) updates) => (toBuilder()..update(updates)).build();
+  ProductsState rebuild(void Function(ProductsStateBuilder) updates) =>
+      (toBuilder()..update(updates)).build();
 
   @override
   ProductsStateBuilder toBuilder() => new ProductsStateBuilder()..replace(this);
@@ -203,7 +236,9 @@ class _$ProductsState extends ProductsState {
   @override
   bool operator ==(Object other) {
     if (identical(other, this)) return true;
-    return other is ProductsState && products == other.products && searchedProducts == other.searchedProducts;
+    return other is ProductsState &&
+        products == other.products &&
+        searchedProducts == other.searchedProducts;
   }
 
   @override
@@ -220,16 +255,20 @@ class _$ProductsState extends ProductsState {
   }
 }
 
-class ProductsStateBuilder implements Builder<ProductsState, ProductsStateBuilder> {
+class ProductsStateBuilder
+    implements Builder<ProductsState, ProductsStateBuilder> {
   _$ProductsState _$v;
 
   ListBuilder<Product> _products;
-  ListBuilder<Product> get products => _$this._products ??= new ListBuilder<Product>();
+  ListBuilder<Product> get products =>
+      _$this._products ??= new ListBuilder<Product>();
   set products(ListBuilder<Product> products) => _$this._products = products;
 
   ListBuilder<Product> _searchedProducts;
-  ListBuilder<Product> get searchedProducts => _$this._searchedProducts ??= new ListBuilder<Product>();
-  set searchedProducts(ListBuilder<Product> searchedProducts) => _$this._searchedProducts = searchedProducts;
+  ListBuilder<Product> get searchedProducts =>
+      _$this._searchedProducts ??= new ListBuilder<Product>();
+  set searchedProducts(ListBuilder<Product> searchedProducts) =>
+      _$this._searchedProducts = searchedProducts;
 
   ProductsStateBuilder();
 
@@ -259,7 +298,10 @@ class ProductsStateBuilder implements Builder<ProductsState, ProductsStateBuilde
   _$ProductsState build() {
     _$ProductsState _$result;
     try {
-      _$result = _$v ?? new _$ProductsState._(products: products.build(), searchedProducts: searchedProducts.build());
+      _$result = _$v ??
+          new _$ProductsState._(
+              products: products.build(),
+              searchedProducts: searchedProducts.build());
     } catch (_) {
       String _$failedField;
       try {
@@ -268,7 +310,8 @@ class ProductsStateBuilder implements Builder<ProductsState, ProductsStateBuilde
         _$failedField = 'searchedProducts';
         searchedProducts.build();
       } catch (e) {
-        throw new BuiltValueNestedFieldError('ProductsState', _$failedField, e.toString());
+        throw new BuiltValueNestedFieldError(
+            'ProductsState', _$failedField, e.toString());
       }
       rethrow;
     }
@@ -297,7 +340,8 @@ class _$Product extends Product {
   @override
   final BuiltList<String> searchIndex;
 
-  factory _$Product([void Function(ProductBuilder) updates]) => (new ProductBuilder()..update(updates)).build();
+  factory _$Product([void Function(ProductBuilder) updates]) =>
+      (new ProductBuilder()..update(updates)).build();
 
   _$Product._(
       {this.id,
@@ -340,7 +384,8 @@ class _$Product extends Product {
   }
 
   @override
-  Product rebuild(void Function(ProductBuilder) updates) => (toBuilder()..update(updates)).build();
+  Product rebuild(void Function(ProductBuilder) updates) =>
+      (toBuilder()..update(updates)).build();
 
   @override
   ProductBuilder toBuilder() => new ProductBuilder()..replace(this);
@@ -366,7 +411,11 @@ class _$Product extends Product {
         $jc(
             $jc(
                 $jc(
-                    $jc($jc($jc($jc($jc(0, id.hashCode), title.hashCode), price.hashCode), description.hashCode),
+                    $jc(
+                        $jc(
+                            $jc($jc($jc(0, id.hashCode), title.hashCode),
+                                price.hashCode),
+                            description.hashCode),
                         category.hashCode),
                     images.hashCode),
                 review.hashCode),
@@ -414,7 +463,8 @@ class ProductBuilder implements Builder<Product, ProductBuilder> {
   set category(String category) => _$this._category = category;
 
   ListBuilder<String> _images;
-  ListBuilder<String> get images => _$this._images ??= new ListBuilder<String>();
+  ListBuilder<String> get images =>
+      _$this._images ??= new ListBuilder<String>();
   set images(ListBuilder<String> images) => _$this._images = images;
 
   double _review;
@@ -423,11 +473,14 @@ class ProductBuilder implements Builder<Product, ProductBuilder> {
 
   ProductState _productState;
   ProductState get productState => _$this._productState;
-  set productState(ProductState productState) => _$this._productState = productState;
+  set productState(ProductState productState) =>
+      _$this._productState = productState;
 
   ListBuilder<String> _searchIndex;
-  ListBuilder<String> get searchIndex => _$this._searchIndex ??= new ListBuilder<String>();
-  set searchIndex(ListBuilder<String> searchIndex) => _$this._searchIndex = searchIndex;
+  ListBuilder<String> get searchIndex =>
+      _$this._searchIndex ??= new ListBuilder<String>();
+  set searchIndex(ListBuilder<String> searchIndex) =>
+      _$this._searchIndex = searchIndex;
 
   ProductBuilder();
 
@@ -484,7 +537,8 @@ class ProductBuilder implements Builder<Product, ProductBuilder> {
         _$failedField = 'searchIndex';
         searchIndex.build();
       } catch (e) {
-        throw new BuiltValueNestedFieldError('Product', _$failedField, e.toString());
+        throw new BuiltValueNestedFieldError(
+            'Product', _$failedField, e.toString());
       }
       rethrow;
     }

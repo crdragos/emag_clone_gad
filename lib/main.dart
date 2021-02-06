@@ -28,7 +28,7 @@ class _eMagCloneState extends State<eMagClone> with InitMixin<eMagClone> {
             child: MaterialApp(
               title: 'eMag Clone',
               theme: ThemeData(
-                appBarTheme: AppBarTheme(
+                appBarTheme: const AppBarTheme(
                   elevation: 0.0,
                   color: Colors.white,
                   brightness: Brightness.light,
