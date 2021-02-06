@@ -7,6 +7,7 @@ Reducer<ProductsState> productsReducer = combineReducers(<Reducer<ProductsState>
   TypedReducer<ProductsState, GetProductsSuccessful>(_getProductsSuccessful),
   TypedReducer<ProductsState, SearchProductsSuccessful>(_searchProductsSuccessful),
   TypedReducer<ProductsState, SetSelectedCategory>(_setSelectedCategory),
+  TypedReducer<ProductsState, SetSelectedProductId>(_setSelectedProductId),
 ]);
 
 ProductsState _getProductsSuccessful(ProductsState state, GetProductsSuccessful action) {
@@ -19,4 +20,8 @@ ProductsState _searchProductsSuccessful(ProductsState state, SearchProductsSucce
 
 ProductsState _setSelectedCategory(ProductsState state, SetSelectedCategory action) {
   return state.rebuild((ProductsStateBuilder b) => b.selectedCategory = action.category);
+}
+
+ProductsState _setSelectedProductId(ProductsState state, SetSelectedProductId action) {
+  return state.rebuild((ProductsStateBuilder b) => b.selectedProductId = action.productId);
 }

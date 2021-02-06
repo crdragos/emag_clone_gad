@@ -54,6 +54,11 @@ class _$ProductsStateSerializer implements StructuredSerializer<ProductsState> {
         ..add('selectedCategory')
         ..add(serializers.serialize(object.selectedCategory, specifiedType: const FullType(String)));
     }
+    if (object.selectedProductId != null) {
+      result
+        ..add('selectedProductId')
+        ..add(serializers.serialize(object.selectedProductId, specifiedType: const FullType(String)));
+    }
     return result;
   }
 
@@ -78,6 +83,9 @@ class _$ProductsStateSerializer implements StructuredSerializer<ProductsState> {
           break;
         case 'selectedCategory':
           result.selectedCategory = serializers.deserialize(value, specifiedType: const FullType(String)) as String;
+          break;
+        case 'selectedProductId':
+          result.selectedProductId = serializers.deserialize(value, specifiedType: const FullType(String)) as String;
           break;
       }
     }
@@ -190,11 +198,13 @@ class _$ProductsState extends ProductsState {
   final BuiltList<Product> searchedProducts;
   @override
   final String selectedCategory;
+  @override
+  final String selectedProductId;
 
   factory _$ProductsState([void Function(ProductsStateBuilder) updates]) =>
       (new ProductsStateBuilder()..update(updates)).build();
 
-  _$ProductsState._({this.products, this.searchedProducts, this.selectedCategory}) : super._() {
+  _$ProductsState._({this.products, this.searchedProducts, this.selectedCategory, this.selectedProductId}) : super._() {
     if (products == null) {
       throw new BuiltValueNullFieldError('ProductsState', 'products');
     }
@@ -215,12 +225,14 @@ class _$ProductsState extends ProductsState {
     return other is ProductsState &&
         products == other.products &&
         searchedProducts == other.searchedProducts &&
-        selectedCategory == other.selectedCategory;
+        selectedCategory == other.selectedCategory &&
+        selectedProductId == other.selectedProductId;
   }
 
   @override
   int get hashCode {
-    return $jf($jc($jc($jc(0, products.hashCode), searchedProducts.hashCode), selectedCategory.hashCode));
+    return $jf($jc($jc($jc($jc(0, products.hashCode), searchedProducts.hashCode), selectedCategory.hashCode),
+        selectedProductId.hashCode));
   }
 
   @override
@@ -228,7 +240,8 @@ class _$ProductsState extends ProductsState {
     return (newBuiltValueToStringHelper('ProductsState')
           ..add('products', products)
           ..add('searchedProducts', searchedProducts)
-          ..add('selectedCategory', selectedCategory))
+          ..add('selectedCategory', selectedCategory)
+          ..add('selectedProductId', selectedProductId))
         .toString();
   }
 }
@@ -248,6 +261,10 @@ class ProductsStateBuilder implements Builder<ProductsState, ProductsStateBuilde
   String get selectedCategory => _$this._selectedCategory;
   set selectedCategory(String selectedCategory) => _$this._selectedCategory = selectedCategory;
 
+  String _selectedProductId;
+  String get selectedProductId => _$this._selectedProductId;
+  set selectedProductId(String selectedProductId) => _$this._selectedProductId = selectedProductId;
+
   ProductsStateBuilder();
 
   ProductsStateBuilder get _$this {
@@ -255,6 +272,7 @@ class ProductsStateBuilder implements Builder<ProductsState, ProductsStateBuilde
       _products = _$v.products?.toBuilder();
       _searchedProducts = _$v.searchedProducts?.toBuilder();
       _selectedCategory = _$v.selectedCategory;
+      _selectedProductId = _$v.selectedProductId;
       _$v = null;
     }
     return this;
@@ -281,7 +299,8 @@ class ProductsStateBuilder implements Builder<ProductsState, ProductsStateBuilde
           new _$ProductsState._(
               products: products.build(),
               searchedProducts: searchedProducts.build(),
-              selectedCategory: selectedCategory);
+              selectedCategory: selectedCategory,
+              selectedProductId: selectedProductId);
     } catch (_) {
       String _$failedField;
       try {
