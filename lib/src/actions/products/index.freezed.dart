@@ -1056,3 +1056,413 @@ abstract class SetSelectedProductId$ implements SetSelectedProductId {
   @override
   $SetSelectedProductId$CopyWith<SetSelectedProductId$> get copyWith;
 }
+
+/// @nodoc
+class _$CreateReviewTearOff {
+  const _$CreateReviewTearOff();
+
+// ignore: unused_element
+  CreateReview$ call(String text, int mark) {
+    return CreateReview$(
+      text,
+      mark,
+    );
+  }
+
+// ignore: unused_element
+  CreateReviewSuccessful successful() {
+    return const CreateReviewSuccessful();
+  }
+
+// ignore: unused_element
+  CreateReviewError error(Object error) {
+    return CreateReviewError(
+      error,
+    );
+  }
+}
+
+/// @nodoc
+// ignore: unused_element
+const $CreateReview = _$CreateReviewTearOff();
+
+/// @nodoc
+mixin _$CreateReview {
+  @optionalTypeArgs
+  Result when<Result extends Object>(
+    Result $default(String text, int mark), {
+    @required Result successful(),
+    @required Result error(Object error),
+  });
+  @optionalTypeArgs
+  Result maybeWhen<Result extends Object>(
+    Result $default(String text, int mark), {
+    Result successful(),
+    Result error(Object error),
+    @required Result orElse(),
+  });
+  @optionalTypeArgs
+  Result map<Result extends Object>(
+    Result $default(CreateReview$ value), {
+    @required Result successful(CreateReviewSuccessful value),
+    @required Result error(CreateReviewError value),
+  });
+  @optionalTypeArgs
+  Result maybeMap<Result extends Object>(
+    Result $default(CreateReview$ value), {
+    Result successful(CreateReviewSuccessful value),
+    Result error(CreateReviewError value),
+    @required Result orElse(),
+  });
+}
+
+/// @nodoc
+abstract class $CreateReviewCopyWith<$Res> {
+  factory $CreateReviewCopyWith(CreateReview value, $Res Function(CreateReview) then) =
+      _$CreateReviewCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class _$CreateReviewCopyWithImpl<$Res> implements $CreateReviewCopyWith<$Res> {
+  _$CreateReviewCopyWithImpl(this._value, this._then);
+
+  final CreateReview _value;
+  // ignore: unused_field
+  final $Res Function(CreateReview) _then;
+}
+
+/// @nodoc
+abstract class $CreateReview$CopyWith<$Res> {
+  factory $CreateReview$CopyWith(CreateReview$ value, $Res Function(CreateReview$) then) =
+      _$CreateReview$CopyWithImpl<$Res>;
+  $Res call({String text, int mark});
+}
+
+/// @nodoc
+class _$CreateReview$CopyWithImpl<$Res> extends _$CreateReviewCopyWithImpl<$Res>
+    implements $CreateReview$CopyWith<$Res> {
+  _$CreateReview$CopyWithImpl(CreateReview$ _value, $Res Function(CreateReview$) _then)
+      : super(_value, (v) => _then(v as CreateReview$));
+
+  @override
+  CreateReview$ get _value => super._value as CreateReview$;
+
+  @override
+  $Res call({
+    Object text = freezed,
+    Object mark = freezed,
+  }) {
+    return _then(CreateReview$(
+      text == freezed ? _value.text : text as String,
+      mark == freezed ? _value.mark : mark as int,
+    ));
+  }
+}
+
+/// @nodoc
+class _$CreateReview$ implements CreateReview$ {
+  const _$CreateReview$(this.text, this.mark)
+      : assert(text != null),
+        assert(mark != null);
+
+  @override
+  final String text;
+  @override
+  final int mark;
+
+  @override
+  String toString() {
+    return 'CreateReview(text: $text, mark: $mark)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is CreateReview$ &&
+            (identical(other.text, text) || const DeepCollectionEquality().equals(other.text, text)) &&
+            (identical(other.mark, mark) || const DeepCollectionEquality().equals(other.mark, mark)));
+  }
+
+  @override
+  int get hashCode =>
+      runtimeType.hashCode ^ const DeepCollectionEquality().hash(text) ^ const DeepCollectionEquality().hash(mark);
+
+  @override
+  $CreateReview$CopyWith<CreateReview$> get copyWith => _$CreateReview$CopyWithImpl<CreateReview$>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  Result when<Result extends Object>(
+    Result $default(String text, int mark), {
+    @required Result successful(),
+    @required Result error(Object error),
+  }) {
+    assert($default != null);
+    assert(successful != null);
+    assert(error != null);
+    return $default(text, mark);
+  }
+
+  @override
+  @optionalTypeArgs
+  Result maybeWhen<Result extends Object>(
+    Result $default(String text, int mark), {
+    Result successful(),
+    Result error(Object error),
+    @required Result orElse(),
+  }) {
+    assert(orElse != null);
+    if ($default != null) {
+      return $default(text, mark);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  Result map<Result extends Object>(
+    Result $default(CreateReview$ value), {
+    @required Result successful(CreateReviewSuccessful value),
+    @required Result error(CreateReviewError value),
+  }) {
+    assert($default != null);
+    assert(successful != null);
+    assert(error != null);
+    return $default(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  Result maybeMap<Result extends Object>(
+    Result $default(CreateReview$ value), {
+    Result successful(CreateReviewSuccessful value),
+    Result error(CreateReviewError value),
+    @required Result orElse(),
+  }) {
+    assert(orElse != null);
+    if ($default != null) {
+      return $default(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class CreateReview$ implements CreateReview {
+  const factory CreateReview$(String text, int mark) = _$CreateReview$;
+
+  String get text;
+  int get mark;
+  $CreateReview$CopyWith<CreateReview$> get copyWith;
+}
+
+/// @nodoc
+abstract class $CreateReviewSuccessfulCopyWith<$Res> {
+  factory $CreateReviewSuccessfulCopyWith(CreateReviewSuccessful value, $Res Function(CreateReviewSuccessful) then) =
+      _$CreateReviewSuccessfulCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class _$CreateReviewSuccessfulCopyWithImpl<$Res> extends _$CreateReviewCopyWithImpl<$Res>
+    implements $CreateReviewSuccessfulCopyWith<$Res> {
+  _$CreateReviewSuccessfulCopyWithImpl(CreateReviewSuccessful _value, $Res Function(CreateReviewSuccessful) _then)
+      : super(_value, (v) => _then(v as CreateReviewSuccessful));
+
+  @override
+  CreateReviewSuccessful get _value => super._value as CreateReviewSuccessful;
+}
+
+/// @nodoc
+class _$CreateReviewSuccessful implements CreateReviewSuccessful {
+  const _$CreateReviewSuccessful();
+
+  @override
+  String toString() {
+    return 'CreateReview.successful()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) || (other is CreateReviewSuccessful);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  Result when<Result extends Object>(
+    Result $default(String text, int mark), {
+    @required Result successful(),
+    @required Result error(Object error),
+  }) {
+    assert($default != null);
+    assert(successful != null);
+    assert(error != null);
+    return successful();
+  }
+
+  @override
+  @optionalTypeArgs
+  Result maybeWhen<Result extends Object>(
+    Result $default(String text, int mark), {
+    Result successful(),
+    Result error(Object error),
+    @required Result orElse(),
+  }) {
+    assert(orElse != null);
+    if (successful != null) {
+      return successful();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  Result map<Result extends Object>(
+    Result $default(CreateReview$ value), {
+    @required Result successful(CreateReviewSuccessful value),
+    @required Result error(CreateReviewError value),
+  }) {
+    assert($default != null);
+    assert(successful != null);
+    assert(error != null);
+    return successful(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  Result maybeMap<Result extends Object>(
+    Result $default(CreateReview$ value), {
+    Result successful(CreateReviewSuccessful value),
+    Result error(CreateReviewError value),
+    @required Result orElse(),
+  }) {
+    assert(orElse != null);
+    if (successful != null) {
+      return successful(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class CreateReviewSuccessful implements CreateReview {
+  const factory CreateReviewSuccessful() = _$CreateReviewSuccessful;
+}
+
+/// @nodoc
+abstract class $CreateReviewErrorCopyWith<$Res> {
+  factory $CreateReviewErrorCopyWith(CreateReviewError value, $Res Function(CreateReviewError) then) =
+      _$CreateReviewErrorCopyWithImpl<$Res>;
+  $Res call({Object error});
+}
+
+/// @nodoc
+class _$CreateReviewErrorCopyWithImpl<$Res> extends _$CreateReviewCopyWithImpl<$Res>
+    implements $CreateReviewErrorCopyWith<$Res> {
+  _$CreateReviewErrorCopyWithImpl(CreateReviewError _value, $Res Function(CreateReviewError) _then)
+      : super(_value, (v) => _then(v as CreateReviewError));
+
+  @override
+  CreateReviewError get _value => super._value as CreateReviewError;
+
+  @override
+  $Res call({
+    Object error = freezed,
+  }) {
+    return _then(CreateReviewError(
+      error == freezed ? _value.error : error,
+    ));
+  }
+}
+
+@Implements(ErrorAction)
+
+/// @nodoc
+class _$CreateReviewError implements CreateReviewError {
+  const _$CreateReviewError(this.error) : assert(error != null);
+
+  @override
+  final Object error;
+
+  @override
+  String toString() {
+    return 'CreateReview.error(error: $error)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is CreateReviewError &&
+            (identical(other.error, error) || const DeepCollectionEquality().equals(other.error, error)));
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode ^ const DeepCollectionEquality().hash(error);
+
+  @override
+  $CreateReviewErrorCopyWith<CreateReviewError> get copyWith =>
+      _$CreateReviewErrorCopyWithImpl<CreateReviewError>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  Result when<Result extends Object>(
+    Result $default(String text, int mark), {
+    @required Result successful(),
+    @required Result error(Object error),
+  }) {
+    assert($default != null);
+    assert(successful != null);
+    assert(error != null);
+    return error(this.error);
+  }
+
+  @override
+  @optionalTypeArgs
+  Result maybeWhen<Result extends Object>(
+    Result $default(String text, int mark), {
+    Result successful(),
+    Result error(Object error),
+    @required Result orElse(),
+  }) {
+    assert(orElse != null);
+    if (error != null) {
+      return error(this.error);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  Result map<Result extends Object>(
+    Result $default(CreateReview$ value), {
+    @required Result successful(CreateReviewSuccessful value),
+    @required Result error(CreateReviewError value),
+  }) {
+    assert($default != null);
+    assert(successful != null);
+    assert(error != null);
+    return error(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  Result maybeMap<Result extends Object>(
+    Result $default(CreateReview$ value), {
+    Result successful(CreateReviewSuccessful value),
+    Result error(CreateReviewError value),
+    @required Result orElse(),
+  }) {
+    assert(orElse != null);
+    if (error != null) {
+      return error(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class CreateReviewError implements CreateReview, ErrorAction {
+  const factory CreateReviewError(Object error) = _$CreateReviewError;
+
+  Object get error;
+  $CreateReviewErrorCopyWith<CreateReviewError> get copyWith;
+}

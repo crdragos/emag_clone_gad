@@ -8,4 +8,5 @@ import 'package:emag_clone_gad/src/models/serializers.dart';
 part 'products_state.dart';
 part 'product.dart';
 part 'product_state.dart';
+part 'review.dart';
 part 'index.g.dart';

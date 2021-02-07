@@ -32,6 +32,7 @@ final BuiltSet<ProductState> _$values = new BuiltSet<ProductState>(const <Produc
 Serializer<ProductsState> _$productsStateSerializer = new _$ProductsStateSerializer();
 Serializer<Product> _$productSerializer = new _$ProductSerializer();
 Serializer<ProductState> _$productStateSerializer = new _$ProductStateSerializer();
+Serializer<ProductReview> _$productReviewSerializer = new _$ProductReviewSerializer();
 
 class _$ProductsStateSerializer implements StructuredSerializer<ProductsState> {
   @override
@@ -189,6 +190,64 @@ class _$ProductStateSerializer implements PrimitiveSerializer<ProductState> {
   ProductState deserialize(Serializers serializers, Object serialized,
           {FullType specifiedType = FullType.unspecified}) =>
       ProductState.valueOf(serialized as String);
+}
+
+class _$ProductReviewSerializer implements StructuredSerializer<ProductReview> {
+  @override
+  final Iterable<Type> types = const [ProductReview, _$ProductReview];
+  @override
+  final String wireName = 'ProductReview';
+
+  @override
+  Iterable<Object> serialize(Serializers serializers, ProductReview object,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = <Object>[
+      'id',
+      serializers.serialize(object.id, specifiedType: const FullType(String)),
+      'productId',
+      serializers.serialize(object.productId, specifiedType: const FullType(String)),
+      'uid',
+      serializers.serialize(object.uid, specifiedType: const FullType(String)),
+      'mark',
+      serializers.serialize(object.mark, specifiedType: const FullType(int)),
+    ];
+    if (object.text != null) {
+      result..add('text')..add(serializers.serialize(object.text, specifiedType: const FullType(String)));
+    }
+    return result;
+  }
+
+  @override
+  ProductReview deserialize(Serializers serializers, Iterable<Object> serialized,
+      {FullType specifiedType = FullType.unspecified}) {
+    final result = new ProductReviewBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current as String;
+      iterator.moveNext();
+      final dynamic value = iterator.current;
+      switch (key) {
+        case 'id':
+          result.id = serializers.deserialize(value, specifiedType: const FullType(String)) as String;
+          break;
+        case 'productId':
+          result.productId = serializers.deserialize(value, specifiedType: const FullType(String)) as String;
+          break;
+        case 'uid':
+          result.uid = serializers.deserialize(value, specifiedType: const FullType(String)) as String;
+          break;
+        case 'text':
+          result.text = serializers.deserialize(value, specifiedType: const FullType(String)) as String;
+          break;
+        case 'mark':
+          result.mark = serializers.deserialize(value, specifiedType: const FullType(int)) as int;
+          break;
+      }
+    }
+
+    return result.build();
+  }
 }
 
 class _$ProductsState extends ProductsState {
@@ -529,6 +588,128 @@ class ProductBuilder implements Builder<Product, ProductBuilder> {
       }
       rethrow;
     }
+    replace(_$result);
+    return _$result;
+  }
+}
+
+class _$ProductReview extends ProductReview {
+  @override
+  final String id;
+  @override
+  final String productId;
+  @override
+  final String uid;
+  @override
+  final String text;
+  @override
+  final int mark;
+
+  factory _$ProductReview([void Function(ProductReviewBuilder) updates]) =>
+      (new ProductReviewBuilder()..update(updates)).build();
+
+  _$ProductReview._({this.id, this.productId, this.uid, this.text, this.mark}) : super._() {
+    if (id == null) {
+      throw new BuiltValueNullFieldError('ProductReview', 'id');
+    }
+    if (productId == null) {
+      throw new BuiltValueNullFieldError('ProductReview', 'productId');
+    }
+    if (uid == null) {
+      throw new BuiltValueNullFieldError('ProductReview', 'uid');
+    }
+    if (mark == null) {
+      throw new BuiltValueNullFieldError('ProductReview', 'mark');
+    }
+  }
+
+  @override
+  ProductReview rebuild(void Function(ProductReviewBuilder) updates) => (toBuilder()..update(updates)).build();
+
+  @override
+  ProductReviewBuilder toBuilder() => new ProductReviewBuilder()..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is ProductReview &&
+        id == other.id &&
+        productId == other.productId &&
+        uid == other.uid &&
+        text == other.text &&
+        mark == other.mark;
+  }
+
+  @override
+  int get hashCode {
+    return $jf($jc($jc($jc($jc($jc(0, id.hashCode), productId.hashCode), uid.hashCode), text.hashCode), mark.hashCode));
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper('ProductReview')
+          ..add('id', id)
+          ..add('productId', productId)
+          ..add('uid', uid)
+          ..add('text', text)
+          ..add('mark', mark))
+        .toString();
+  }
+}
+
+class ProductReviewBuilder implements Builder<ProductReview, ProductReviewBuilder> {
+  _$ProductReview _$v;
+
+  String _id;
+  String get id => _$this._id;
+  set id(String id) => _$this._id = id;
+
+  String _productId;
+  String get productId => _$this._productId;
+  set productId(String productId) => _$this._productId = productId;
+
+  String _uid;
+  String get uid => _$this._uid;
+  set uid(String uid) => _$this._uid = uid;
+
+  String _text;
+  String get text => _$this._text;
+  set text(String text) => _$this._text = text;
+
+  int _mark;
+  int get mark => _$this._mark;
+  set mark(int mark) => _$this._mark = mark;
+
+  ProductReviewBuilder();
+
+  ProductReviewBuilder get _$this {
+    if (_$v != null) {
+      _id = _$v.id;
+      _productId = _$v.productId;
+      _uid = _$v.uid;
+      _text = _$v.text;
+      _mark = _$v.mark;
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(ProductReview other) {
+    if (other == null) {
+      throw new ArgumentError.notNull('other');
+    }
+    _$v = other as _$ProductReview;
+  }
+
+  @override
+  void update(void Function(ProductReviewBuilder) updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  _$ProductReview build() {
+    final _$result = _$v ?? new _$ProductReview._(id: id, productId: productId, uid: uid, text: text, mark: mark);
     replace(_$result);
     return _$result;
   }

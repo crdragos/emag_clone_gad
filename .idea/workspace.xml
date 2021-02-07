@@ -5,21 +5,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="552b6865-5498-4a66-9989-844b9edc4233" name="Default Changelist" comment="ui design for buttons -added">
-      <change afterPath="$PROJECT_DIR$/lib/src/containers/products/selected_product_container.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/src/presentation/products/product_page.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/src/actions/products/create_review.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/src/models/products/review.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/src/presentation/products/product_review.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.flutter-plugins-dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/.flutter-plugins-dependencies" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/src/actions/auth/index.freezed.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/actions/auth/index.freezed.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/actions/products/index.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/actions/products/index.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/src/actions/products/index.freezed.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/actions/products/index.freezed.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/actions/products/set.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/actions/products/set.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/containers/products/index.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/containers/products/index.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/data/products_api.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/data/products_api.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/epics/products_epics.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/epics/products_epics.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/src/models/auth/index.g.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/models/auth/index.g.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/src/models/index.g.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/models/index.g.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/models/products/index.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/models/products/index.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/src/models/products/index.g.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/models/products/index.g.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/models/products/products_state.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/models/products/products_state.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/models/serializers.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/models/serializers.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/src/models/serializers.g.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/models/serializers.g.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/presentation/products/product_item.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/presentation/products/product_item.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/presentation/products/product_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/presentation/products/product_page.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/src/presentation/routes.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/presentation/routes.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/reducer/products_reducer.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/reducer/products_reducer.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +73,7 @@
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="editing.templates" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.Dart" />
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
   <component name="RecentsManager">
@@ -139,7 +144,11 @@
       <workItem from="1612366798042" duration="10000" />
       <workItem from="1612622695037" duration="6910000" />
       <workItem from="1612630467857" duration="2255000" />
-      <workItem from="1612650175040" duration="4316000" />
+      <workItem from="1612650175040" duration="4697000" />
+      <workItem from="1612687475416" duration="1973000" />
+      <workItem from="1612689633212" duration="166000" />
+      <workItem from="1612716685824" duration="151000" />
+      <workItem from="1612716860346" duration="4863000" />
     </task>
     <task id="LOCAL-00001" summary="widget_test -eliminated">
       <created>1610055630231</created>
@@ -232,7 +241,14 @@
       <option name="project" value="LOCAL" />
       <updated>1612652639450</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="* show product details">
+      <created>1612654652863</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1612654652863</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -266,6 +282,7 @@
     <MESSAGE value="* delete unused imports" />
     <MESSAGE value="* highlight products per category" />
     <MESSAGE value="* show all products from a category" />
-    <option name="LAST_COMMIT_MESSAGE" value="* show all products from a category" />
+    <MESSAGE value="* show product details" />
+    <option name="LAST_COMMIT_MESSAGE" value="* show product details" />
   </component>
 </project>

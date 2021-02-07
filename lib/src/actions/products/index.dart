@@ -7,4 +7,5 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 part 'get_products.dart';
 part 'search_products.dart';
 part 'set.dart';
+part 'create_review.dart';
 part 'index.freezed.dart';
