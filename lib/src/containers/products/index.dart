@@ -10,3 +10,4 @@ part 'searched_products_container.dart';
 part 'selected_category_products_container.dart';
 part 'selected_category_container.dart';
 part 'selected_product_container.dart';
+part 'product_container.dart';

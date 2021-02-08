@@ -1,5 +1,6 @@
 import 'package:emag_clone_gad/src/containers/auth/index.dart';
 import 'package:emag_clone_gad/src/models/auth/index.dart';
+import 'package:emag_clone_gad/src/presentation/cart/cart_page.dart';
 import 'package:emag_clone_gad/src/presentation/products/products_page.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -20,7 +21,7 @@ class _HomePageState extends State<HomePage> {
       body: <Widget>[
         const ProductsPage(),
         Container(color: Colors.yellow),
-        Container(color: Colors.orange),
+        const CartPage(),
         Container(color: Colors.green),
         Container(color: Colors.blue),
       ][_page],
