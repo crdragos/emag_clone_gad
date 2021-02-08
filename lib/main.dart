@@ -26,6 +26,7 @@ class _eMagCloneState extends State<eMagClone> with InitMixin<eMagClone> {
           return StoreProvider<AppState>(
             store: store,
             child: MaterialApp(
+              debugShowCheckedModeBanner: false,
               title: 'eMag Clone',
               theme: ThemeData(
                 appBarTheme: const AppBarTheme(
@@ -34,7 +35,7 @@ class _eMagCloneState extends State<eMagClone> with InitMixin<eMagClone> {
                   brightness: Brightness.dark,
                   textTheme: TextTheme(
                     headline6: TextStyle(
-                      color: Colors.blue,
+                      color: Colors.black,
                       fontSize: 18.0,
                       fontWeight: FontWeight.bold,
                     ),

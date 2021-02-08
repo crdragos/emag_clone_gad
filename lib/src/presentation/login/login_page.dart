@@ -29,18 +29,15 @@ class _LoginPageState extends State<LoginPage> with DialogMixin {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Scaffold(
-        appBar: AppBar(
-          title: const Text('Login'),
-          centerTitle: true,
-        ),
-        body: Padding(
-          padding: const EdgeInsets.all(16.0),
-          child: Form(
-            child: Builder(
-              builder: (BuildContext context) {
-                return Column(
+    return Scaffold(
+      body: Padding(
+        padding: const EdgeInsets.fromLTRB(16, 56, 16, 8),
+        child: Form(
+          child: Builder(
+            builder: (BuildContext context) {
+              return Padding(
+                padding: const EdgeInsets.all(16.0),
+                child: Column(
                   children: <Widget>[
                     TextFormField(
                       controller: _email,
@@ -69,6 +66,17 @@ class _LoginPageState extends State<LoginPage> with DialogMixin {
                       },
                     ),
                     const SizedBox(height: 8.0),
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: GestureDetector(
+                        child: Text(
+                          'Reset Password',
+                          style: TextStyle(color: Colors.blueAccent[200]),
+                        ),
+                        onTap: () => Navigator.pushNamed(context, AppRoutes.resetPassword),
+                      ),
+                    ),
+                    const SizedBox(height: 8.0),
                     Container(
                       width: 250.0,
                       child: Align(
@@ -77,7 +85,7 @@ class _LoginPageState extends State<LoginPage> with DialogMixin {
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(30.0),
                           ),
-                          color: Colors.greenAccent,
+                          color: Colors.blue,
                           child: const Text(
                             'Login',
                             style: TextStyle(
@@ -97,12 +105,6 @@ class _LoginPageState extends State<LoginPage> with DialogMixin {
                         ),
                       ),
                     ),
-                    FlatButton(
-                      child: const Text('Reset Password'),
-                      onPressed: () {
-                        Navigator.pushNamed(context, AppRoutes.resetPassword);
-                      },
-                    ),
                     const Divider(),
                     const Spacer(),
                     Container(
@@ -113,15 +115,15 @@ class _LoginPageState extends State<LoginPage> with DialogMixin {
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(30.0),
                           ),
-                          color: Colors.white,
+                          color: const Color(0xffCE107C),
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: const <Widget>[
                               Icon(
                                 FontAwesomeIcons.google,
-                                color: Color(0xffCE107C),
+                                color: Colors.white,
                               ),
-                              SizedBox(width: 8.0),
+                              SizedBox(width: 16.0),
                               Text(
                                 'Login with Google',
                                 style: TextStyle(
@@ -157,9 +159,9 @@ class _LoginPageState extends State<LoginPage> with DialogMixin {
                       ),
                     ),
                   ],
-                );
-              },
-            ),
+                ),
+              );
+            },
           ),
         ),
       ),

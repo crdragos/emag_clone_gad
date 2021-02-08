@@ -51,7 +51,7 @@ class NamePage extends StatelessWidget {
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(30.0),
                           ),
-                          color: Colors.greenAccent,
+                          color: Colors.blue,
                           child: const Text(
                             'Continue',
                             style: TextStyle(

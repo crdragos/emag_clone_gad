@@ -5,26 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="552b6865-5498-4a66-9989-844b9edc4233" name="Default Changelist" comment="ui design for buttons -added">
-      <change afterPath="$PROJECT_DIR$/lib/src/actions/products/create_review.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/src/models/products/review.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/src/presentation/products/product_review.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.flutter-plugins-dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/.flutter-plugins-dependencies" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/actions/auth/index.freezed.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/actions/auth/index.freezed.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/actions/products/index.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/actions/products/index.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/actions/products/index.freezed.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/actions/products/index.freezed.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/data/products_api.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/data/products_api.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/epics/products_epics.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/epics/products_epics.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/models/auth/index.g.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/models/auth/index.g.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/models/index.g.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/models/index.g.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/models/products/index.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/models/products/index.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/models/products/index.g.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/models/products/index.g.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/models/serializers.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/models/serializers.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/models/serializers.g.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/models/serializers.g.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/main.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/presentation/home/home_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/presentation/home/home_page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/presentation/login/login_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/presentation/login/login_page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/presentation/login/reset_password_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/presentation/login/reset_password_page.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/src/presentation/products/product_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/presentation/products/product_page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/presentation/products/product_review.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/presentation/products/product_review.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/presentation/register/name_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/presentation/register/name_page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/presentation/register/password_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/presentation/register/password_page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/presentation/register/register_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/presentation/register/register_page.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/src/presentation/routes.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/presentation/routes.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -149,6 +140,7 @@
       <workItem from="1612689633212" duration="166000" />
       <workItem from="1612716685824" duration="151000" />
       <workItem from="1612716860346" duration="4863000" />
+      <workItem from="1612735658086" duration="7707000" />
     </task>
     <task id="LOCAL-00001" summary="widget_test -eliminated">
       <created>1610055630231</created>
@@ -248,7 +240,14 @@
       <option name="project" value="LOCAL" />
       <updated>1612654652863</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="* create product review logic added">
+      <created>1612735787585</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1612735787585</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -283,6 +282,7 @@
     <MESSAGE value="* highlight products per category" />
     <MESSAGE value="* show all products from a category" />
     <MESSAGE value="* show product details" />
-    <option name="LAST_COMMIT_MESSAGE" value="* show product details" />
+    <MESSAGE value="* create product review logic added" />
+    <option name="LAST_COMMIT_MESSAGE" value="* create product review logic added" />
   </component>
 </project>

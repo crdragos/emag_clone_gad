@@ -50,7 +50,7 @@ class _ResetPasswordPageState extends State<ResetPasswordPage> with DialogMixin 
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(30.0),
                           ),
-                          color: Colors.greenAccent,
+                          color: Colors.blue,
                           child: const Text(
                             'Reset Password',
                             style: TextStyle(

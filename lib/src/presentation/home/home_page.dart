@@ -1,5 +1,8 @@
+import 'package:emag_clone_gad/src/containers/auth/index.dart';
+import 'package:emag_clone_gad/src/models/auth/index.dart';
 import 'package:emag_clone_gad/src/presentation/products/products_page.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key key}) : super(key: key);
@@ -22,31 +25,65 @@ class _HomePageState extends State<HomePage> {
         Container(color: Colors.blue),
       ][_page],
       bottomNavigationBar: BottomNavigationBar(
+        selectedItemColor: Colors.blue,
+        unselectedItemColor: Colors.grey,
+        selectedFontSize: 14.0,
+        unselectedFontSize: 14.0,
+        showUnselectedLabels: true,
         currentIndex: _page,
+        iconSize: 28,
         onTap: (int index) {
           setState(() {
             _page = index;
           });
         },
-        items: const <BottomNavigationBarItem>[
-          BottomNavigationBarItem(
-            icon: Icon(Icons.home),
+        items: <BottomNavigationBarItem>[
+          const BottomNavigationBarItem(
+            icon: Icon(FontAwesomeIcons.home),
             label: 'Home',
           ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.search),
+          const BottomNavigationBarItem(
+            icon: Icon(FontAwesomeIcons.search),
             label: 'Search',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.shopping_cart),
+            icon: UserContainer(
+              builder: (BuildContext context, AppUser user) {
+                return Stack(
+                  children: <Widget>[
+                    const Icon(Icons.shopping_cart),
+                    Positioned(
+                      bottom: 6,
+                      left: 12,
+                      child: Container(
+                        height: 30,
+                        decoration: BoxDecoration(
+                          shape: BoxShape.circle,
+                          color: Colors.red[700],
+                        ),
+                        child: Center(
+                          child: Text(
+                            '${user.cart.totalProducts}',
+                            style: const TextStyle(
+                              fontSize: 14,
+                              color: Colors.white,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
+                );
+              },
+            ),
             label: 'Cart',
           ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.favorite),
+          const BottomNavigationBarItem(
+            icon: Icon(FontAwesomeIcons.solidHeart),
             label: 'Favorites',
           ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.person),
+          const BottomNavigationBarItem(
+            icon: Icon(FontAwesomeIcons.solidUser),
             label: 'Account',
           ),
         ],

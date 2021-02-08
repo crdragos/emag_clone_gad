@@ -1,4 +1,3 @@
-import 'package:emag_clone_gad/src/models/index.dart';
 import 'package:emag_clone_gad/src/presentation/home.dart';
 import 'package:emag_clone_gad/src/presentation/login/login_page.dart';
 import 'package:emag_clone_gad/src/presentation/login/reset_password_page.dart';
