@@ -120,7 +120,6 @@ class ProductItem extends StatelessWidget {
                             Cart cart = user.cart ?? Cart();
                             cart = cart.rebuild((CartBuilder b) {
                               final int index = cart.items.indexWhere((CartItem item) => product.id == item.productId);
-
                               if (index == -1) {
                                 b.items.add(CartItem(product.id, 1));
                               } else {

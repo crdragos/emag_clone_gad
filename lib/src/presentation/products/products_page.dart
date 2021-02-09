@@ -35,14 +35,6 @@ class ProductsPage extends StatelessWidget {
                     'Tap to search',
                     style: Theme.of(context).textTheme.bodyText1,
                   ),
-                  UserContainer(
-                    builder: (BuildContext context, AppUser user) {
-                      if (user == null) {
-                        return Container();
-                      }
-                      return Text('${user.cart?.totalProducts}');
-                    },
-                  ),
                 ],
               ),
             ),

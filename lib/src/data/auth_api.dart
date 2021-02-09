@@ -81,6 +81,11 @@ class AuthApi {
   }
 
   Future<void> updateCart(String uid, Cart cart) async {
+    if (cart.items.isEmpty) {
+      await _firestore.doc('users/$uid').update(<String, dynamic>{'cart': FieldValue.delete()});
+      return;
+    }
+
     await _firestore.doc('users/$uid').update(<String, dynamic>{'cart': cart.json});
   }
 }

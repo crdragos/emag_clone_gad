@@ -2,6 +2,7 @@ import 'package:emag_clone_gad/src/containers/auth/index.dart';
 import 'package:emag_clone_gad/src/models/auth/index.dart';
 import 'package:emag_clone_gad/src/presentation/cart/cart_page.dart';
 import 'package:emag_clone_gad/src/presentation/products/products_page.dart';
+import 'package:emag_clone_gad/src/presentation/products/searched_products_page.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
@@ -20,7 +21,7 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       body: <Widget>[
         const ProductsPage(),
-        Container(color: Colors.yellow),
+        const SearchedProductsPage(),
         const CartPage(),
         Container(color: Colors.green),
         Container(color: Colors.blue),
@@ -53,26 +54,27 @@ class _HomePageState extends State<HomePage> {
                 return Stack(
                   children: <Widget>[
                     const Icon(Icons.shopping_cart),
-                    Positioned(
-                      bottom: 6,
-                      left: 12,
-                      child: Container(
-                        height: 30,
-                        decoration: BoxDecoration(
-                          shape: BoxShape.circle,
-                          color: Colors.red[700],
-                        ),
-                        child: Center(
-                          child: Text(
-                            '${user.cart.totalProducts}',
-                            style: const TextStyle(
-                              fontSize: 14,
-                              color: Colors.white,
+                    if (user.cart != null && user.cart.items.isNotEmpty)
+                      Positioned(
+                        bottom: 6,
+                        left: 12,
+                        child: Container(
+                          height: 30,
+                          decoration: BoxDecoration(
+                            shape: BoxShape.circle,
+                            color: Colors.red[700],
+                          ),
+                          child: Center(
+                            child: Text(
+                              '${user.cart.totalProducts}',
+                              style: const TextStyle(
+                                fontSize: 14,
+                                color: Colors.white,
+                              ),
                             ),
                           ),
                         ),
                       ),
-                    ),
                   ],
                 );
               },
